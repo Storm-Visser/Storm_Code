@@ -1,0 +1,10 @@
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

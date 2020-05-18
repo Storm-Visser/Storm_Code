@@ -1,0 +1,9 @@
+auto project
+auto met engine en wheels
+engine heeft max speed en weight en acceleration aan de hand van weight en max speed
+wheels heeft factor op de accelleration en max speed
+bv max speed vd engine is 100 en de factor van de wheels is 0.9 dan wordt de max speed 90
+bv2 acceleration vd engine is 10 en de factor is 0.6 dan wordt de acceleration 6
+functie die de snelste autos laat zien na 100 meter en na 500 meter etc.
+
+mischien later leuke front end ipv gwn text

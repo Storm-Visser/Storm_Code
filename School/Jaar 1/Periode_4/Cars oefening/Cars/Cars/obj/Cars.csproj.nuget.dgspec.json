@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\torna\\OneDrive\\NHLStenden\\jaar 1\\Periode 4\\C#\\code\\Cars\\Cars\\Cars.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\torna\\OneDrive\\NHLStenden\\jaar 1\\Periode 4\\C#\\code\\Cars\\Cars\\Cars.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\torna\\OneDrive\\NHLStenden\\jaar 1\\Periode 4\\C#\\code\\Cars\\Cars\\Cars.csproj",
+        "projectName": "Cars",
+        "projectPath": "C:\\Users\\torna\\OneDrive\\NHLStenden\\jaar 1\\Periode 4\\C#\\code\\Cars\\Cars\\Cars.csproj",
+        "packagesPath": "C:\\Users\\torna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\torna\\OneDrive\\NHLStenden\\jaar 1\\Periode 4\\C#\\code\\Cars\\Cars\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\torna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

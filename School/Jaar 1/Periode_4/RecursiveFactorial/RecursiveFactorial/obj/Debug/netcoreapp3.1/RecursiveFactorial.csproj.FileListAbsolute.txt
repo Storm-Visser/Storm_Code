@@ -1,0 +1,13 @@
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\bin\Debug\netcoreapp3.1\RecursiveFactorial.exe
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\bin\Debug\netcoreapp3.1\RecursiveFactorial.deps.json
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\bin\Debug\netcoreapp3.1\RecursiveFactorial.runtimeconfig.json
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\bin\Debug\netcoreapp3.1\RecursiveFactorial.runtimeconfig.dev.json
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\bin\Debug\netcoreapp3.1\RecursiveFactorial.dll
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\bin\Debug\netcoreapp3.1\RecursiveFactorial.pdb
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\obj\Debug\netcoreapp3.1\RecursiveFactorial.csprojAssemblyReference.cache
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\obj\Debug\netcoreapp3.1\RecursiveFactorial.csproj.CoreCompileInputs.cache
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\obj\Debug\netcoreapp3.1\RecursiveFactorial.AssemblyInfoInputs.cache
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\obj\Debug\netcoreapp3.1\RecursiveFactorial.AssemblyInfo.cs
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\obj\Debug\netcoreapp3.1\RecursiveFactorial.dll
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\obj\Debug\netcoreapp3.1\RecursiveFactorial.pdb
+C:\Users\torna\OneDrive\NHLStenden\jaar 1\Periode 4\C#\code\RecursiveFactorial\RecursiveFactorial\obj\Debug\netcoreapp3.1\RecursiveFactorial.genruntimeconfig.cache
