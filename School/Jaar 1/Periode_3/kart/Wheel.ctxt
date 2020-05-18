@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Wheel
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Wheel\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=brand\ diameter
+comment1.target=Wheel(java.lang.String,\ int)
+comment2.params=
+comment2.target=int\ getGrip()
+comment3.params=
+comment3.target=java.lang.String\ getBrand()
+comment4.params=
+comment4.target=int\ getDiameter()
+comment5.params=newGripPercentage
+comment5.target=void\ setGripPercentage(int)
+numComments=6

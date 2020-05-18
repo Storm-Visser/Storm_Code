@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Employee
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Employee\ here.\r\n\r\n\ @author\ (Storm)\r\n\ @version\ (1)\r\n
+comment1.params=age\ name
+comment1.target=Employee(int,\ java.lang.String)
+comment10.params=monthNr
+comment10.target=double\ calcTotalDistanceCost(int)
+comment2.params=
+comment2.target=int\ getAge()
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=age
+comment4.target=void\ setAge(int)
+comment5.params=name
+comment5.target=void\ setName(java.lang.String)
+comment6.params=distance\ monthNr\ dayNr
+comment6.target=void\ addRoute(int,\ int,\ int)
+comment7.params=id
+comment7.target=void\ removeRoute(int)
+comment8.params=age
+comment8.target=double\ calcDailySalary(int)
+comment9.params=age\ monthNr
+comment9.target=double\ calcMonthSalary(int,\ int)
+numComments=11

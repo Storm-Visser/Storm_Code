@@ -1,0 +1,269 @@
+*{
+    margin:0;
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+div[class^="col-"] {
+    min-height: 20px;
+}
+
+.col-1 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+}
+.col-2 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+}
+
+.col-3 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+}
+
+
+.col-4 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+}
+
+
+
+.col-5 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+}
+
+
+.col-6 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+}
+
+
+
+.col-7 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+}
+
+
+.col-3 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+}
+
+
+.col-8 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+}
+
+.col-9 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+}
+
+.col-10 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+}
+
+.col-11 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+}
+
+.col-12 {
+    grid-area: col;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+}
+
+.header {
+    background-color:rgba(51, 153, 102, 0.5);
+    height:80px;
+    border-radius:30px;
+    margin:10px;
+}
+.link {
+    background-color:rgba(0, 204, 0, 0.3);
+    padding-top:15px;
+    height:30px;
+    text-align:center;
+    padding-bottom:15px;
+    border-radius:20px;
+}
+a{
+    margin:auto;
+    color:black;
+    text-decoration:none;
+    font-size:25px;
+
+}
+body{
+    font-family:verdana;
+    background-image: url("media/background.jpg");
+    background-position: center;
+    background-size: 2000px;
+}
+.content{
+    background-color:rgba(204, 255, 255, 0.1);
+    border-radius:30px 30px 0px 0px;
+    margin:10px;
+    margin-bottom:0px;
+    height:650px;
+}
+
+.tekst{
+    background-color:rgba(204, 255, 255, 0.5);
+    border-radius:30px;
+    padding:10px;
+    height:600px
+}
+#vid {
+    width: 100%;
+    border-radius:30px;
+}
+p{
+    padding-top:5px;
+    padding-bottom:20px;
+    font-size:20px;
+}
+.kleur-fontSize {
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.rss-box {
+    background-color: #f3f3f3;
+    float: left;
+    overflow-y: scroll;
+    min-width: 96%;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 555px;
+    border-radius:30px;
+}
+
+.color img {
+    height: 0px;
+    width: 0px;
+}
+
+.color {
+    padding-left: 5px;
+}
+
+.color2 {
+    padding-left: 5px;
+    border-bottom: 1px solid black;
+}
+h2{
+    padding-left:20px;
+}
+.groot{
+    font-size:30px;
+}
+.img{
+    border-radius: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:570px;
+    margin-top:10px;
+    text-align:center;
+}
+.sunny{
+    background-image: url('../styles/media/sunny.jpg');
+}
+.Cloudy{
+    background-image: url('../styles/media/Cloudy.jpg');
+}
+.Partlycloudy{
+    background-image: url('../styles/media/Partlycloudy.jpg');
+}
+.Overcast{
+    background-image: url('../styles/media/Overcast.jpg');
+}
+.Mist{
+    background-image: url('../styles/media/Mist.jpg');
+}
+.Patchyrainpossible{
+    background-image: url('../styles/media/Patchyrainpossible.jpg');
+}
+.Patchysnowpossible{
+    background-image: url('../styles/media/Patchysnowpossible.jpg');
+}
+.Patchysleetpossible{
+    background-image: url('../styles/media/Patchysleetpossible.jpg');
+}
+.Patchyfreezingdrizzlepossible{
+    background-image: url('../styles/media/Patchyfreezingdrizzlepossible.jpg');
+}
+.Thunderyoutbreakspossible{
+    background-image: url('../styles/media/Thunderyoutbreakspossible.jpg');
+}
+.Blowingsnow{
+    background-image: url('../styles/media/Blowingsnow.jpg');
+}
+.Blizzard{
+    background-image: url('../styles/media/Blizzard.jpg');
+}
+.Fog{
+    background-image: url('../styles/media/Fog.jpg');
+}
+.Freezingfog{
+    background-image: url('../styles/media/Freezingfog.jpg');
+}
+.Patchylightdrizzle{
+    background-image: url('../styles/media/Patchylightdrizzle.jpg');
+}
+.Lightdrizzle{
+    background-image: url('../styles/media/Lightdrizzle.jpg');
+}
+.Freezingdrizzle{
+    background-image: url('../styles/media/Freezingdrizzle.jpg');
+}
+.Heavyfreezingdrizzle{
+    background-image: url('../styles/media/Heavyfreezingdrizzle.jpg');
+}
+.Patchylightrain{
+    background-image: url('../styles/media/Patchylightrain.jpg');
+}
+.Partlycloudy{
+    background-image: url('../styles/media/Partlycloudy.jpg');
+}
+.Lightrain{
+    background-image: url('../styles/media/Lightrain.jpg');
+}
+.Moderaterainattimes{
+    background-image: url('../styles/media/Moderaterainattimes.jpg');
+}
+.Moderaterain{
+    background-image: url('../styles/media/Moderaterain.jpg');
+}
+.Heavyrainattimes{
+    background-image: url('../styles/media/Heavyrainattimes.jpg');
+}
+.Heavyrain{
+    background-image: url('../styles/media/Heavyrain.jpg');
+}
+.Lightfreezingrain{
+    background-image: url('../styles/media/Lightfreezingrain.jpg');
+}

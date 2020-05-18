@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=BoatTrip
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ BootTocht\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=time
+comment1.target=int\ getHoursFromString(java.lang.String)
+numComments=2

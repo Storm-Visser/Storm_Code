@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Engine
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ engine\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=usagePerKm\ brand\ torque
+comment1.target=Engine(double,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=int\ getDistance()
+comment3.params=
+comment3.target=boolean\ isRunning()
+comment4.params=running
+comment4.target=void\ setRunning(boolean)
+comment5.params=
+comment5.target=double\ getBatteryLevel()
+comment6.params=distance
+comment6.target=void\ driveDistance(int)
+numComments=7
