@@ -1,0 +1,13 @@
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\obj\Debug\netcoreapp3.1\Cars.csprojAssemblyReference.cache
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\obj\Debug\netcoreapp3.1\Cars.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\obj\Debug\netcoreapp3.1\Cars.AssemblyInfoInputs.cache
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\obj\Debug\netcoreapp3.1\Cars.AssemblyInfo.cs
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\bin\Debug\netcoreapp3.1\Cars.exe
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\bin\Debug\netcoreapp3.1\Cars.deps.json
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\bin\Debug\netcoreapp3.1\Cars.runtimeconfig.json
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\bin\Debug\netcoreapp3.1\Cars.runtimeconfig.dev.json
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\bin\Debug\netcoreapp3.1\Cars.dll
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\bin\Debug\netcoreapp3.1\Cars.pdb
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\obj\Debug\netcoreapp3.1\Cars.dll
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\obj\Debug\netcoreapp3.1\Cars.pdb
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\Cars oefening\Cars\Cars\obj\Debug\netcoreapp3.1\Cars.genruntimeconfig.cache

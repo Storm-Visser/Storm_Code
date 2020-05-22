@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\torna\\OneDrive\\NHLStenden\\jaar 1\\Periode 4\\C#\\code\\Cars\\Cars\\Cars.csproj",
+      "projectUniqueName": "C:\\xampp\\htdocs\\github\\Storm_Code\\School\\Jaar 1\\Periode_4\\Cars oefening\\Cars\\Cars\\Cars.csproj",
       "projectName": "Cars",
-      "projectPath": "C:\\Users\\torna\\OneDrive\\NHLStenden\\jaar 1\\Periode 4\\C#\\code\\Cars\\Cars\\Cars.csproj",
+      "projectPath": "C:\\xampp\\htdocs\\github\\Storm_Code\\School\\Jaar 1\\Periode_4\\Cars oefening\\Cars\\Cars\\Cars.csproj",
       "packagesPath": "C:\\Users\\torna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\torna\\OneDrive\\NHLStenden\\jaar 1\\Periode 4\\C#\\code\\Cars\\Cars\\obj\\",
+      "outputPath": "C:\\xampp\\htdocs\\github\\Storm_Code\\School\\Jaar 1\\Periode_4\\Cars oefening\\Cars\\Cars\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\torna\\AppData\\Roaming\\NuGet\\NuGet.Config",
