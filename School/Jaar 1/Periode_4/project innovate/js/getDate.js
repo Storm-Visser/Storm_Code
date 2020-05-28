@@ -5,7 +5,7 @@
  */
 function getCurrentDate()
 {
-    let today = new Date();
+    const today = new Date();
     let year = today.getFullYear();
     let month = today.getMonth();
     let day = today.getDate();

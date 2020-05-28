@@ -5,7 +5,7 @@
  */
 function getTime()
 {
-    let today = new Date();
+    const today = new Date();
     let hr = today.getHours();
     let min = today.getMinutes();
     //let sec = today.getSeconds();
