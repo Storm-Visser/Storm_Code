@@ -1,6 +1,10 @@
+//haal het aantal miliseconden na 1 jan 1970 op
 const TODAY = new Date();
-//@todo javadox comment
-
+/**
+ * Functie om het weeknummer op te halen.
+ * Note: Dit gebreurd bij elke refresh.
+ * @return {pastWeeks} het aantal weken die dit jaar om zijn + 1 omdat we in die week zitten
+ */
 function getWeek()
 {
     //haal de eerste dag van het jaar op
@@ -44,4 +48,33 @@ function getCurrentDate()
     element1.innerHTML = date;
     return date;
 }
-export { getCurrentDate }; 
+
+/**
+ * Functie om de tijd van het device op te halen.
+ * Note: Dit gebreurd bij elke refresh.
+ * @return {time} De huidige tijd van het device.
+ */
+function getTime()
+{
+    getCurrentDate();
+    const TODAY = new Date();
+    let hr = TODAY.getHours();
+    let min = TODAY.getMinutes();
+    if(hr < 10)
+    {
+        hr = "0" + hr;
+    }
+    if(min < 10)
+    {
+        min = "0" + min;
+    }
+    //let sec = TODAY.getSeconds();
+    //let time = hr + ":" + min + ":" + sec;
+    let time = hr + ":" + min;
+    let element = document.getElementById('time');
+    element.innerHTML = time;
+    return time;
+}
+
+window.onload = getTime;
+

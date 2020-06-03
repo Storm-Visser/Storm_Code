@@ -1,0 +1,14 @@
+.darkmode 
+{
+    height: 100px;
+    width: 100px;
+    background-color: darkblue;
+}
+
+
+.lightmode
+{
+    height: 100px;
+    width: 100px;
+    background-color:blue;
+}

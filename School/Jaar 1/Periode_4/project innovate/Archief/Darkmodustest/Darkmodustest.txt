@@ -1,0 +1,5 @@
+Dit is een voorbeeld hoe de switch van light naar dark modus kan werken. 
+Mocht je zelf een andere manier hebben zou ik dit graag willen horen :)
+
+Als je er niet uit kan komen hoor ik het graag,
+de comments zijn wel in het engels.

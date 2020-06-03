@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../Css/bootstrap.css" type="text/css">
+        <link id="pagestyle" rel="stylesheet" href="../Css/style.css" type="text/css">
+
+        <link rel="icon" type="image/x-icon" href="../img/logo.ico" /> 
+        <meta charset="UTF-8">
+        <!-- <meta http-equiv="refresh" content="30"> -->
+        <meta name="description" content="Project innovate INF1C">
+        <meta name="author" content=
+            "Tessa Ramaker,
+            Mark Benjamins,
+            Koen Somsen,
+            Jenny van Engelenburg,
+            Arjan Vijn,
+            Niels Exel,
+            Daniël Roosken,
+            Storm Visser"
+        >
+
+        <title>Newsfeed</title>
+
+    </head>
+
+        <body>
+        <div class="container-fluid">
+            <div class="row header">
+                <div class="col-2 white">
+                <h2><span id="clock"></span></h2>
+                </div>
+                <div class="col-1 white">	
+                    <p class="weather-icon">
+                    <!-- <img src="<?php echo '../img/iconen-weerlive/' . $current->image . '.png';?>"> -->
+                    </p>
+                    <!-- <p><?php echo $temperatuur;?> °C</p> -->
+                    <p onclick="showBuienradar()">Click op mij voor het Weer</p>
+                </div>
+                <div class="col-5 white">
+                    <h2><span id="date"></span></h2>
+                </div>
+                <div class="col-3">
+
+                    <button class="darkmode" id="1" value="ONN" style="color:blue" onclick="javascript:toggleBasic(this);"> 
+                        <img src="../img/icons-scherm/darkmode_icon.png" alt="Dark Mode" class='image'>
+                    </button>
+
+                    <nav class="navbar navbar-expand-lg height">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                            <div class="buttonlogin" id="buttonMenu"> 
+                                <img onclick="showLogonPage()" id="docentLogoColorChange" src="../img/icons-scherm/docent.png" alt="Login" class='image'> 
+                            </div>
+                                <!--  Alleen als er ingelogd is:  -->
+                            <div class="buttonlogin " id="aanwezigheidLogo"></div>
+                            <div class="buttonlogin " id="addMessageLogo"></div>
+                            <div class="buttonlogin " id="newsfeedLogo"></div>
+                        </div>
+                    </nav>
+                </div>
+                <div class='col-1'></div>
+            </div>
+
+            <div class="row worksheet">
+                <div class="col-9 newsfeed">
+
+                    <!--Login screen-->
+                    <div id="loginScreen" class="loginScreen"></div>
+
+                    <!--LogOffPage-->
+                    <div id="logOFF"></div>
+
+                    <!--Newsfeed, buienradar-->
+                    <h1 id="koptekst">NEWSFEED</h1>
+                    <div id="paginaInhoud"></div>
+                    <div id="toNewsfeed"></div>
+
+                    <!--aanwezigheid-->
+                    <div id="aanwezigheidCheck"></div>
+
+                    <!--message-->
+                    <div id="showTheMessage"></div>
+
+                </div>
+                <div class="col-3">
+                    <ul id="list">
+                        <!--hier wordt met Js de list elementen aan toegevoegd-->
+                    </ul>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <script src="../Display/js/SPA.js"></script>
+        <script src="../Display/js/darkMode.js"></script>
+        <script src="../Display/js/getNavigation.js"></script>
+        <script src="../Display/js/getFileUploader.js"></script>
+        <!-- <script src="../Display/js/getChangePassword.js"></script> -->
+        <script src="../Display/js/getUsernamAndPassword.js"></script>
+        <script type = "module" src="../Display/js/main.js"></script>
+    </body>
+</html>

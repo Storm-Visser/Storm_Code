@@ -1,0 +1,141 @@
+:root {
+    --light-blue-color: #6298bc;  
+    --dark-blue-color: #3d6b83;
+}
+
+body 
+{
+    margin: 0;
+    background-color: #6298bc;
+    height: 100%;
+    width: 100%;
+}
+
+.header
+{
+    height: 150px;
+    padding: 30px;
+}
+
+.white
+{
+    height: 100%;
+    background-color: white;
+    margin-right: 5px;
+    /* margin-left: 10px; */
+    text-align: center;
+}
+
+/* .white h2 
+{
+    position: relative;
+    top: 25%;
+} */
+
+.buttonlogin
+{
+    height: 90px;
+    width: 85px;
+    /* vertical-align: middle; */
+    text-align: center;
+    float: left;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.height
+{
+    height: 90px;
+}
+
+.image
+{
+    width: 100%;
+}
+
+.darkmode
+{
+    height: 100%;
+    width: 90px;
+    background-color: grey;
+    float: left;
+    margin-left: -15px;
+    margin-right: 35px;
+    padding: 0;
+}
+
+.weerknop
+{
+    height:100%;
+    margin-left: -15px;
+    margin-right: -15px;
+    background-color: white;
+}
+
+.worksheet
+{
+    padding-left: 30px;
+    margin-right: 40px;
+}
+
+.newsfeed 
+{
+    height: 755px;
+    background-color: white;
+    /* margin-left: 10px; */
+}
+
+.loginScreen
+{
+    text-align: center;
+}
+
+.loginForm #name
+{
+    margin-bottom: 8px;
+}
+
+.loginForm #password
+{
+    margin-bottom: 8px;
+}
+
+.teacher
+{
+    height: 60px;
+    width: 123%;
+    background-color: white;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.color
+{
+    background-color: red;
+/*    background-color: yellow;
+    background-color: green;*/
+    width: 5%;
+    height: 100%;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.docent
+{
+    /* float:left; 
+    width: 80%;
+    margin-left: 10%; */
+    font-size: 20pt;
+}
+
+.weather-icon
+{
+    padding: 0;
+    margin: 0;
+}
+#list
+{
+    list-style-type: none;
+    padding-left: 20px;
+}

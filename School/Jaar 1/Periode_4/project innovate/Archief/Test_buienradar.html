@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- <?php
+    include "../display/weerbericht.php";
+?> -->
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../Css/bootstrap.css" type="text/css">
+        <link id="pagestyle" rel="stylesheet" href="../Css/style.css" type="text/css">
+        <link rel="icon" type="image/x-icon" href="../img/logo.ico" /> 
+        <meta charset="UTF-8">
+        <!-- <meta http-equiv="refresh" content="30"> -->
+        <meta name="description" content="Project innovate INF1C">
+        <meta name="author" content=
+            "Tessa Ramaker,
+            Mark Benjamins,
+            Koen Somsen,
+            Jenny van Engelenburg,
+            Arjan Vijn,
+            Niels Exel,
+            Daniël Roosken,
+            Storm Visser"
+        >
+
+        <title>Buienradar</title>
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+        <div class="row header">
+                <div class="col-2 white">
+                <h2><span id="clock"></span></h2>
+                </div>
+                <div class="col-1 white">	
+                    <p class="weather-icon">
+                    <!-- <img src="<?php echo '../img/iconen-weerlive/' . $current->image . '.png';?>"> -->
+                    </p>
+                    <!-- <p><?php echo $temperatuur;?> °C</p> -->
+                    <p onclick="toBuienradar()">Click op mij voor het Weer</p>
+                </div>
+                <div class="col-5 white">
+                    <h2><span id="date"></span></h2>
+                </div>
+                <div class="col-3">
+                    <button class="darkmode" id="1" value="ONN" style="color:blue" onclick="javascript:toggleBasic(this);"> 
+                        <img src="../img/icons-scherm/darkmode_icon.png" alt="Dark Mode" class='image'>
+                    </button>
+                    <nav class="navbar navbar-expand-lg height">
+                            <span class="navbar-toggler-icon"></span>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                            <div class="buttonlogin "> 
+                                <img onclick="toLogonPage()" id="docentLogoColorChange" src="../img/icons-scherm/docent.png" alt="Login" class='image'> 
+                            </div>
+                                <!--  Alleen als er ingelogd is:  -->
+<!--                            <div class="buttonlogin "> <img src="../img/icons-scherm/aanwezigheid.png" alt="Aanwezigheid" class='image'> </div>
+                                <div class="buttonlogin "> <img src="../img/icons-scherm/addmessage.png" alt="Add Message" class='image'> </div>
+                                <div class="buttonlogin "> <img src="../img/icons-scherm/logo.png" alt="Logo" class='image'> </div>-->
+                        </div>
+                    </nav>
+                </div>
+                <div class='col-1'></div>
+            </div>
+        
+        <div class="row worksheet">
+            <div class="col-9 newsfeed">
+                <h1>BUIENRADAR</h1>
+                <!-- <IFRAME SRC="https://gadgets.buienradar.nl/gadget/radarfivedays" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME> -->
+                <iframe src="https://gadgets.buienradar.nl/gadget/zoommap/?lat=52.77917&lng=6.90694&overname=2&zoom=8&naam=Emmen&size=3&voor=1" scrolling=no width=550 height=512 frameborder=no></iframe>
+                <button type="button" onclick="toNewsfeed()">Back to newsfeed</button>
+            </div>
+            <div class="col-2">
+                    <div class="teacher">
+                    <div class="color"></div><img src="" alt=""><p class="docent">Docent 1</p>
+                    </div>
+                    <div style="clear:left;"></div>
+                    <div class="teacher">
+                        <div class="color"></div><img src="" alt=""><p class="docent">Docent 2</p>
+                    </div>
+                    <div style="clear:left;"></div>
+                    <div class="teacher">
+                    <div class="color"></div><img src="" alt=""><p class="docent">Docent 3</p>
+                    </div> 
+                    <div style="clear:left;"></div>
+                    <div class="teacher">
+                    <div class="color"></div><img src="" alt=""><p class="docent">Docent 4</p>
+                    </div> 
+                    <div style="clear:left;"></div>
+                    <div class="teacher">
+                    <div class="color"></div><img src="" alt=""><p class="docent">Docent 5</p>
+                    </div> 
+                    <div style="clear:left;"></div>
+                </div>
+            <div class="col-1"></div>
+        </div>
+        </div>
+        <script src="../Display/js/darkMode.js"></script>
+        <script src="../Display/js/getNavigation.js"></script>
+        <script  type = "module" src="../Display/js/main.js"></script>
+        
+    </body>
+</html>
+
+        
+
