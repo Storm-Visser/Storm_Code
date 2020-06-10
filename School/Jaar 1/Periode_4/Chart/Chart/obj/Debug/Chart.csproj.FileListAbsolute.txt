@@ -1,0 +1,9 @@
+C:\Users\winnie\Stenden\Dropbox\!Stenden@Work!\Jaar 2\C#\Projects\Chart\Chart\bin\Debug\Chart.exe.config
+C:\Users\winnie\Stenden\Dropbox\!Stenden@Work!\Jaar 2\C#\Projects\Chart\Chart\bin\Debug\Chart.exe
+C:\Users\winnie\Stenden\Dropbox\!Stenden@Work!\Jaar 2\C#\Projects\Chart\Chart\bin\Debug\Chart.pdb
+C:\Users\winnie\Stenden\Dropbox\!Stenden@Work!\Jaar 2\C#\Projects\Chart\Chart\obj\Debug\Chart.csprojResolveAssemblyReference.cache
+C:\Users\winnie\Stenden\Dropbox\!Stenden@Work!\Jaar 2\C#\Projects\Chart\Chart\obj\Debug\Chart.Form1.resources
+C:\Users\winnie\Stenden\Dropbox\!Stenden@Work!\Jaar 2\C#\Projects\Chart\Chart\obj\Debug\Chart.Properties.Resources.resources
+C:\Users\winnie\Stenden\Dropbox\!Stenden@Work!\Jaar 2\C#\Projects\Chart\Chart\obj\Debug\Chart.csproj.GenerateResource.Cache
+C:\Users\winnie\Stenden\Dropbox\!Stenden@Work!\Jaar 2\C#\Projects\Chart\Chart\obj\Debug\Chart.exe
+C:\Users\winnie\Stenden\Dropbox\!Stenden@Work!\Jaar 2\C#\Projects\Chart\Chart\obj\Debug\Chart.pdb

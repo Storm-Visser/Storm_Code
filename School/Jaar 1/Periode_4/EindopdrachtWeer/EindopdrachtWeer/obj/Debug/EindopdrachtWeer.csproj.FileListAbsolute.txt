@@ -1,0 +1,15 @@
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\bin\Debug\EindopdrachtWeer.exe.config
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\bin\Debug\EindopdrachtWeer.exe
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\bin\Debug\EindopdrachtWeer.pdb
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.csprojAssemblyReference.cache
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.Form1.resources
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.Properties.Resources.resources
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.csproj.GenerateResource.cache
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.exe
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.pdb
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\bin\Debug\Newtonsoft.Json.dll
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\bin\Debug\Newtonsoft.Json.xml
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.csproj.CopyComplete
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.Form2.resources
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.Form3.resources

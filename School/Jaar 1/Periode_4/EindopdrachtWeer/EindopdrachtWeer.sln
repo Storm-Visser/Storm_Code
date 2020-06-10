@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EindopdrachtWeer", "EindopdrachtWeer\EindopdrachtWeer.csproj", "{7F6349B7-D357-4B31-83DD-26515EDE3FCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F6349B7-D357-4B31-83DD-26515EDE3FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6349B7-D357-4B31-83DD-26515EDE3FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6349B7-D357-4B31-83DD-26515EDE3FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6349B7-D357-4B31-83DD-26515EDE3FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA7C1114-00EA-4264-BB85-17E6464D2AE1}
+	EndGlobalSection
+EndGlobal
