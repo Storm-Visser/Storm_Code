@@ -38,7 +38,7 @@
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(12, 286);
-            this.progressBar1.MarqueeAnimationSpeed = 50;
+            this.progressBar1.MarqueeAnimationSpeed = 25;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(403, 30);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;

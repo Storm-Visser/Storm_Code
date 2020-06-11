@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,6 +46,9 @@
             this.lblWeather = new System.Windows.Forms.Label();
             this.lblPlace = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn5Days = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chForecast = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblName = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,11 +69,11 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblLocaltime = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbWeather)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chForecast)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +91,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.lblLocaltime);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.pbWeather);
             this.tabPage1.Controls.Add(this.lblUpdate);
@@ -179,12 +186,15 @@
             this.lblPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlace.Location = new System.Drawing.Point(103, 49);
             this.lblPlace.Name = "lblPlace";
-            this.lblPlace.Size = new System.Drawing.Size(258, 39);
+            this.lblPlace.Size = new System.Drawing.Size(240, 39);
             this.lblPlace.TabIndex = 1;
-            this.lblPlace.Text = "Place, provincie";
+            this.lblPlace.Text = "Place, Country";
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btn5Days);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.chForecast);
             this.tabPage2.Controls.Add(this.lblName);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
@@ -193,6 +203,65 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Trend";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btn5Days
+            // 
+            this.btn5Days.Location = new System.Drawing.Point(333, 28);
+            this.btn5Days.Name = "btn5Days";
+            this.btn5Days.Size = new System.Drawing.Size(75, 31);
+            this.btn5Days.TabIndex = 6;
+            this.btn5Days.Text = "5 Dagen";
+            this.btn5Days.UseVisualStyleBackColor = true;
+            this.btn5Days.Click += new System.EventHandler(this.btn5Days_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(73, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 17);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "24 uur vooruit";
+            // 
+            // chForecast
+            // 
+            chartArea3.AxisX.IsMarginVisible = false;
+            chartArea3.AxisX.IsStartedFromZero = false;
+            chartArea3.AxisX.Title = "Datum en tijd";
+            chartArea3.AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
+            chartArea3.AxisY.IsStartedFromZero = false;
+            chartArea3.AxisY.Title = "Temperatuur";
+            chartArea3.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea3.Name = "ChartArea1";
+            this.chForecast.ChartAreas.Add(chartArea3);
+            legend3.Enabled = false;
+            legend3.Name = "Legend1";
+            this.chForecast.Legends.Add(legend3);
+            this.chForecast.Location = new System.Drawing.Point(-4, 42);
+            this.chForecast.Name = "chForecast";
+            this.chForecast.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            this.chForecast.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series7.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series7.BorderColor = System.Drawing.Color.MediumOrchid;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Color = System.Drawing.Color.Red;
+            series7.Legend = "Legend1";
+            series7.Name = "Average";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "Min";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Legend = "Legend1";
+            series9.Name = "Max";
+            this.chForecast.Series.Add(series7);
+            this.chForecast.Series.Add(series8);
+            this.chForecast.Series.Add(series9);
+            this.chForecast.Size = new System.Drawing.Size(430, 262);
+            this.chForecast.TabIndex = 4;
+            this.chForecast.Text = "Voorspelling";
             // 
             // lblName
             // 
@@ -251,9 +320,9 @@
             this.rbF.AutoSize = true;
             this.rbF.Location = new System.Drawing.Point(171, 180);
             this.rbF.Name = "rbF";
-            this.rbF.Size = new System.Drawing.Size(37, 21);
+            this.rbF.Size = new System.Drawing.Size(43, 21);
             this.rbF.TabIndex = 6;
-            this.rbF.Text = "F";
+            this.rbF.Text = "°F";
             this.rbF.UseVisualStyleBackColor = true;
             // 
             // rbC
@@ -262,10 +331,10 @@
             this.rbC.Checked = true;
             this.rbC.Location = new System.Drawing.Point(127, 180);
             this.rbC.Name = "rbC";
-            this.rbC.Size = new System.Drawing.Size(38, 21);
+            this.rbC.Size = new System.Drawing.Size(44, 21);
             this.rbC.TabIndex = 5;
             this.rbC.TabStop = true;
-            this.rbC.Text = "C";
+            this.rbC.Text = "°C";
             this.rbC.UseVisualStyleBackColor = true;
             // 
             // txtInterval
@@ -376,15 +445,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblLocaltime
-            // 
-            this.lblLocaltime.AutoSize = true;
-            this.lblLocaltime.Location = new System.Drawing.Point(219, 183);
-            this.lblLocaltime.Name = "lblLocaltime";
-            this.lblLocaltime.Size = new System.Drawing.Size(46, 17);
-            this.lblLocaltime.TabIndex = 9;
-            this.lblLocaltime.Text = "label5";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -402,6 +462,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbWeather)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chForecast)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -442,7 +503,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblLocaltime;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chForecast;
+        private System.Windows.Forms.Button btn5Days;
+        private System.Windows.Forms.Label label5;
     }
 }
 

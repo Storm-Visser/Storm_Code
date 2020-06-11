@@ -36,3 +36,4 @@ C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\Eindo
 C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\bin\Debug\System.Memory.xml
 C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\bin\Debug\System.Numerics.Vectors.xml
 C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\xampp\htdocs\github\Storm_Code\School\Jaar 1\Periode_4\EindopdrachtWeer\EindopdrachtWeer\obj\Debug\EindopdrachtWeer.Form4.resources
