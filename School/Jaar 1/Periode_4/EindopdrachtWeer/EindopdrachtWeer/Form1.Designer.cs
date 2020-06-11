@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.pbWeather = new System.Windows.Forms.PictureBox();
             this.lblUpdate = new System.Windows.Forms.Label();
             this.lblWind = new System.Windows.Forms.Label();
@@ -39,12 +40,11 @@
             this.lblTemp = new System.Windows.Forms.Label();
             this.lblWeather = new System.Windows.Forms.Label();
             this.lblPlace = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnOpties = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnOpties = new System.Windows.Forms.Button();
             this.rbF = new System.Windows.Forms.RadioButton();
             this.rbC = new System.Windows.Forms.RadioButton();
             this.txtInterval = new System.Windows.Forms.TextBox();
@@ -82,6 +82,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.pbWeather);
             this.tabPage1.Controls.Add(this.lblUpdate);
             this.tabPage1.Controls.Add(this.lblWind);
@@ -89,7 +90,6 @@
             this.tabPage1.Controls.Add(this.lblTemp);
             this.tabPage1.Controls.Add(this.lblWeather);
             this.tabPage1.Controls.Add(this.lblPlace);
-            this.tabPage1.Controls.Add(this.lblName);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -98,8 +98,21 @@
             this.tabPage1.Text = "Actueel";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.MediumPurple;
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(334, 39);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Stenden Weerstation";
+            // 
             // pbWeather
             // 
+            this.pbWeather.BackColor = System.Drawing.Color.White;
             this.pbWeather.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbWeather.ErrorImage")));
             this.pbWeather.Image = global::EindopdrachtWeer.Properties.Resources.cat;
             this.pbWeather.ImageLocation = "";
@@ -168,20 +181,9 @@
             this.lblPlace.TabIndex = 1;
             this.lblPlace.Text = "Place, provincie";
             // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblName.Location = new System.Drawing.Point(3, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(334, 39);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Stenden Weerstation";
-            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.lblName);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -190,21 +192,22 @@
             this.tabPage2.Text = "Trend";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // lblName
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(334, 39);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Stenden Weerstation";
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.MediumPurple;
+            this.lblName.Location = new System.Drawing.Point(3, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(334, 39);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "Stenden Weerstation";
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.btnOpties);
             this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.btnOpties);
             this.tabPage3.Controls.Add(this.rbF);
             this.tabPage3.Controls.Add(this.rbC);
             this.tabPage3.Controls.Add(this.txtInterval);
@@ -219,6 +222,18 @@
             this.tabPage3.Text = "Opties";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MediumPurple;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(334, 39);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Stenden Weerstation";
+            // 
             // btnOpties
             // 
             this.btnOpties.Location = new System.Drawing.Point(127, 232);
@@ -228,17 +243,6 @@
             this.btnOpties.Text = "Go";
             this.btnOpties.UseVisualStyleBackColor = true;
             this.btnOpties.Click += new System.EventHandler(this.btnOpties_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(334, 39);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Stenden Weerstation";
             // 
             // rbF
             // 
@@ -374,10 +378,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(432, 328);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Stenden Weerstation";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -400,7 +406,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label lblWeather;
         private System.Windows.Forms.Label lblPlace;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblWind;
         private System.Windows.Forms.Label lblHum;
         private System.Windows.Forms.Label lblTemp;
@@ -413,8 +418,6 @@
         private System.Windows.Forms.ToolStripMenuItem verversenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sluitenToolStripMenuItem;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton rbF;
         private System.Windows.Forms.RadioButton rbC;
         private System.Windows.Forms.TextBox txtInterval;
@@ -425,6 +428,9 @@
         private System.Windows.Forms.Button btnOpties;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pbWeather;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label4;
     }
 }
 

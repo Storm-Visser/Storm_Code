@@ -19,8 +19,8 @@ namespace EindopdrachtWeer
 {
     public partial class Form1 : Form
     {
-        int interval = 5;
-        string cityName = "Emmen";
+        int interval = 60;
+        string cityName = "Veenoord";
         
         public Form1()
         {
@@ -29,6 +29,9 @@ namespace EindopdrachtWeer
             Thread.Sleep(2000);
             InitializeComponent();
             GetWeather(cityName);
+            this.TopMost = true;
+            WindowState = FormWindowState.Normal;
+            Visible = true;
             timer1.Interval = interval * 1000;
             txtInterval.Text = string.Format("{0}", interval);
             txtPlace.Text = string.Format("{0}", cityName);
@@ -87,7 +90,7 @@ namespace EindopdrachtWeer
         private void Weerstation_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             this.Show();
-            Weerstation.Visible = false;
+            //Weerstation.Visible = true;
             WindowState = FormWindowState.Normal;
         }
 
