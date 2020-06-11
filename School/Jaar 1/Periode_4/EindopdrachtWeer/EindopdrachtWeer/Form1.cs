@@ -29,7 +29,7 @@ namespace EindopdrachtWeer
             Thread.Sleep(2000);
             InitializeComponent();
             GetWeather(cityName);
-            this.TopMost = true;
+            TopMost = true;
             WindowState = FormWindowState.Normal;
             Visible = true;
             timer1.Interval = interval * 1000;
@@ -71,11 +71,18 @@ namespace EindopdrachtWeer
                 lblWind.Text = string.Format("Wind: {0} met {1} Km/H", WindDir, output.wind.speed);
                 lblUpdate.Text = string.Format("Laatst geupdate: {0}", LastUpdate);
                 lblWeather.Text = string.Format("{0}", output.weather[0].description);
+                //var date = new DateTime((long)output.dt);
+                //lblLocaltime.Text = string.Format("{0}", date);
                 var myImage = output.weather[0].icon;
                 pbWeather.Image = (Image)Properties.Resources.ResourceManager.GetObject(myImage);
                 timer1.Interval = interval * 1000;
                 huidigeTemperatuurToolStripMenuItem.Text = string.Format("Temperatuur: {0} {1}", Temp, Symbol);
             }
+        }
+        
+        void GetForecast(string city)
+        {
+
         }
         public void StartForm()
         {

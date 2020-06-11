@@ -61,6 +61,7 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblLocaltime = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbWeather)).BeginInit();
@@ -82,6 +83,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblLocaltime);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.pbWeather);
             this.tabPage1.Controls.Add(this.lblUpdate);
@@ -374,6 +376,15 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblLocaltime
+            // 
+            this.lblLocaltime.AutoSize = true;
+            this.lblLocaltime.Location = new System.Drawing.Point(219, 183);
+            this.lblLocaltime.Name = "lblLocaltime";
+            this.lblLocaltime.Size = new System.Drawing.Size(46, 17);
+            this.lblLocaltime.TabIndex = 9;
+            this.lblLocaltime.Text = "label5";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -431,6 +442,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblLocaltime;
     }
 }
 

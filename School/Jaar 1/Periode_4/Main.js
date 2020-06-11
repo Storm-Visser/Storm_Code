@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"Main_atlas_1", frames: [[902,0,980,828],[0,0,900,980],[1926,0,76,81],[1010,1684,256,256],[1410,1450,200,232],[1010,1450,398,232],[1010,1216,552,232],[1884,0,40,1698],[0,1216,1008,232],[0,1450,1008,212],[0,1664,1008,212],[0,982,1438,232]]}
+		{name:"Main_atlas_1", frames: [[902,0,980,828],[1010,1684,256,256],[0,0,900,980],[1926,0,76,81],[1410,1450,200,232],[1010,1450,398,232],[1884,0,40,1698],[1010,1216,552,232],[0,1450,1008,212],[0,1216,1008,232],[0,1664,1008,212],[0,982,1438,232]]}
 ];
 
 
@@ -144,21 +144,21 @@ lib.ssMetadata = [
 
 
 
-(lib.docent = function() {
+(lib.darkmode_icon = function() {
 	this.initialize(ss["Main_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.talin = function() {
+(lib.docent = function() {
 	this.initialize(ss["Main_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.darkmode_icon = function() {
+(lib.talin = function() {
 	this.initialize(ss["Main_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
@@ -179,35 +179,35 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_14 = function() {
+(lib.CachedBmp_1 = function() {
 	this.initialize(ss["Main_atlas_1"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_1 = function() {
+(lib.CachedBmp_14 = function() {
 	this.initialize(ss["Main_atlas_1"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_9 = function() {
+(lib.CachedBmp_7 = function() {
 	this.initialize(ss["Main_atlas_1"]);
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_8 = function() {
+(lib.CachedBmp_9 = function() {
 	this.initialize(ss["Main_atlas_1"]);
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_7 = function() {
+(lib.CachedBmp_8 = function() {
 	this.initialize(ss["Main_atlas_1"]);
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
@@ -264,17 +264,18 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.instance = new lib._4ab34e87f5bfa51e06dfb5961b497d74();
 	this.instance.setTransform(0,13,0.102,0.1172);
 
-	this.text = new cjs.Text("15°C", "40px 'Calibri'");
-	this.text.textAlign = "center";
-	this.text.lineHeight = 51;
-	this.text.lineWidth = 98;
-	this.text.parent = this;
-	this.text.setTransform(140,14.6);
+	this.degree_txt = new cjs.Text("15°C", "40px 'Calibri'");
+	this.degree_txt.name = "degree_txt";
+	this.degree_txt.textAlign = "center";
+	this.degree_txt.lineHeight = 51;
+	this.degree_txt.lineWidth = 98;
+	this.degree_txt.parent = this;
+	this.degree_txt.setTransform(140,14.6);
 
 	this.instance_1 = new lib.CachedBmp_13();
 	this.instance_1.setTransform(0,0,0.5,0.5);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.text},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.degree_txt},{t:this.instance}]}).wait(1));
 
 	this._renderFirstFrame();
 
@@ -343,6 +344,9 @@ p.nominalBounds = new cjs.Rectangle(0,0,100.1,116);
 		
 		this.time_txt.text = h + ":" + m + ":" + s;
 		this.Date.text = "hallo";
+		var degree = Math.round((Math.random() * 10) + 10);
+		toString(degree);
+		this.degree_txt.text = degree;
 	}
 	this.frame_1 = function() {
 		this.gotoAndPlay(1);
@@ -527,8 +531,8 @@ lib.properties = {
 	color: "#6298BC",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_10.png?1591869700725", id:"CachedBmp_10"},
-		{src:"images/Main_atlas_1.png?1591869700703", id:"Main_atlas_1"}
+		{src:"images/CachedBmp_10.png?1591874470686", id:"CachedBmp_10"},
+		{src:"images/Main_atlas_1.png?1591874470650", id:"Main_atlas_1"}
 	],
 	preloads: []
 };
