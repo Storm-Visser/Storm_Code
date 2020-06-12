@@ -44,7 +44,7 @@ namespace EindopdrachtWeer
                 }
                 else
                 {
-                    Symbol = "Koeien";
+                    Symbol = "K";
                 }
 
                 chForecastDays.Series["Average"].Points.Clear();

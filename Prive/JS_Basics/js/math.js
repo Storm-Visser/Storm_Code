@@ -19,6 +19,7 @@ function random()
 document.body.style.background = "rgb(" + random() +"," + random() + "," + random() +")";
 let text = document.getElementById("text");
 text.style.color = "rgb(" + random() +"," + random() + "," + random() +")";
+console.log("rgb(" + random() +"," + random() + "," + random() +")")
 text.style.textAlign = "center";
 text.style.fontSize = "230px";
 text.style.paddingTop = "230px";

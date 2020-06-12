@@ -98,6 +98,7 @@ namespace EindopdrachtWeer
                 chForecast.Series["Average"].Points.Clear();
                 chForecast.ChartAreas["ChartArea1"].AxisY.Title = string.Format("Temperatuur in {0}", Symbol);
                 chForecast.Series["Average"].Points.AddXY(LastUpdate.ToString("MM/dd HH:mm"), forecast.list[0].main.temp);
+
                 for (int i = 1; i <8; i++)
                 {
                     int toAdd = i * 3;
