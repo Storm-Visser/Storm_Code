@@ -22,7 +22,6 @@ namespace EindopdrachtWeer
         public class main
         {
             public double temp { get; set; }
-            public double pressure { get; set; }
             public string humidity { get; set; }
 
         }
@@ -40,13 +39,9 @@ namespace EindopdrachtWeer
         {
             public string name { get; set; }
             public sys sys { get; set; }
-            public double dt { get; set; }
             public wind wind { get; set; }
             public main main { get; set; }
-
             public List<weather> weather { get; set; }
-
-            public coord coord { get; set; }
 
         }
     }

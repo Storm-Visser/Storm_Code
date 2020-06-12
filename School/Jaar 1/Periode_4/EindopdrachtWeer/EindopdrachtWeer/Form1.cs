@@ -1,19 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Reflection;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Timers;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using System.Resources;
-using System.Runtime.InteropServices;
 
 namespace EindopdrachtWeer
 {
@@ -81,6 +71,7 @@ namespace EindopdrachtWeer
                 var Object = JsonConvert.DeserializeObject<Forecast>(json);
                 Forecast forecast = Object;
                 DateTime LastUpdate = DateTime.Now;
+
                 string Symbol = "";
                 if (unit == "metric")
                 {
@@ -97,12 +88,12 @@ namespace EindopdrachtWeer
 
                 chForecast.Series["Average"].Points.Clear();
                 chForecast.ChartAreas["ChartArea1"].AxisY.Title = string.Format("Temperatuur in {0}", Symbol);
-                chForecast.Series["Average"].Points.AddXY(LastUpdate.ToString("MM/dd HH:mm"), forecast.list[0].main.temp);
+                chForecast.Series["Average"].Points.AddXY(LastUpdate.ToString("dd/MM HH:mm"), forecast.list[0].main.temp);
 
-                for (int i = 1; i <8; i++)
+                for (int i = 1; i < 5; i++)
                 {
-                    int toAdd = i * 3;
-                    chForecast.Series["Average"].Points.AddXY(LastUpdate.AddHours(toAdd).ToString("MM/dd HH:mm"), forecast.list[i].main.temp);
+                    int toAdd = i * 24;
+                    chForecast.Series["Average"].Points.AddXY(LastUpdate.AddHours(toAdd).ToString("dd/MM HH:mm"), forecast.list[i * 8].main.temp);
                 }
             }
         }

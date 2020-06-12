@@ -31,8 +31,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.chForecastDays = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblName = new System.Windows.Forms.Label();
@@ -54,7 +52,7 @@
             legend1.Enabled = false;
             legend1.Name = "Legend1";
             this.chForecastDays.Legends.Add(legend1);
-            this.chForecastDays.Location = new System.Drawing.Point(-74, 42);
+            this.chForecastDays.Location = new System.Drawing.Point(-67, 42);
             this.chForecastDays.Name = "chForecastDays";
             this.chForecastDays.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             this.chForecastDays.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -64,19 +62,9 @@
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Color = System.Drawing.Color.Red;
             series1.Legend = "Legend1";
-            series1.Name = "Average";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Min";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Max";
+            series1.Name = "Temperature";
             this.chForecastDays.Series.Add(series1);
-            this.chForecastDays.Series.Add(series2);
-            this.chForecastDays.Series.Add(series3);
-            this.chForecastDays.Size = new System.Drawing.Size(2048, 289);
+            this.chForecastDays.Size = new System.Drawing.Size(1977, 289);
             this.chForecastDays.TabIndex = 5;
             this.chForecastDays.Text = "Voorspelling";
             // 

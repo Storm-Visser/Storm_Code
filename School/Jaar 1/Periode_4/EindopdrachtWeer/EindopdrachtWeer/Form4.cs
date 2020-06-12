@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Reflection;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Timers;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using System.Resources;
-using System.Runtime.InteropServices;
 namespace EindopdrachtWeer
 {
     public partial class Form4 : Form
@@ -47,15 +35,15 @@ namespace EindopdrachtWeer
                     Symbol = "K";
                 }
 
-                chForecastDays.Series["Average"].Points.Clear();
+                chForecastDays.Series["Temperature"].Points.Clear();
                 chForecastDays.ChartAreas["ChartArea1"].AxisY.Title = string.Format("Temperatuur in {0}", Symbol);
-                chForecastDays.Series["Average"].Points.AddXY(LastUpdate.ToString("MM/dd HH:mm"), forecast.list[0].main.temp);
+                chForecastDays.Series["Temperature"].Points.AddXY(LastUpdate.ToString("dd/MM HH:mm"), forecast.list[0].main.temp);
                 /*chForecastDays.Series["Min"].Points.AddXY(LastUpdate.ToString("MM/dd HH:mm"), forecast.list[0].main.temp_min);
                 chForecastDays.Series["Max"].Points.AddXY(LastUpdate.ToString("MM/dd HH:mm"), forecast.list[0].main.temp_max);*/
-                for (int i = 1; i < 39; i++)
+                for (int i = 1; i < 40; i++)
                 {
                     int toAdd = i * 3;
-                    chForecastDays.Series["Average"].Points.AddXY(LastUpdate.AddHours(toAdd).ToString("MM/dd HH:mm"), forecast.list[i].main.temp);
+                    chForecastDays.Series["Temperature"].Points.AddXY(LastUpdate.AddHours(toAdd).ToString("dd/MM HH:mm"), forecast.list[i].main.temp);
                     /*chForecastDays.Series["Min"].Points.AddXY(LastUpdate.AddHours(toAdd).ToString("MM/dd HH:mm"), forecast.list[i].main.temp_min);
                     chForecastDays.Series["Max"].Points.AddXY(LastUpdate.AddHours(toAdd).ToString("MM/dd HH:mm"), forecast.list[i].main.temp_max);*/
                 }
