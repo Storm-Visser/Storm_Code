@@ -106,13 +106,11 @@ namespace EindopdrachtWeer
             Visible = true;
             tabControl1.SelectedIndex = 2;
         }
-
         private void Weerstation_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             this.Show();
             WindowState = FormWindowState.Normal;
         }
-
         private void verversenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GetWeather(cityName);
@@ -137,13 +135,11 @@ namespace EindopdrachtWeer
         {
             GetWeather(cityName);
         }
-
         private void overToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 about = new Form3();
             about.ShowDialog();
         }
-
         private void sluitenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
@@ -154,19 +150,11 @@ namespace EindopdrachtWeer
             e.Cancel = true;
             Visible = false;
         }
-
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Visible = true;
             tabControl1.SelectedIndex = 0;
         }
-        DateTime GetDate(double milliseconds)
-        {
-            DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0);
-            day = day.AddSeconds(milliseconds);
-            return day;
-        }
-
         private void btn5Days_Click(object sender, EventArgs e)
         {
             Form4 MeerDagen = new Form4();

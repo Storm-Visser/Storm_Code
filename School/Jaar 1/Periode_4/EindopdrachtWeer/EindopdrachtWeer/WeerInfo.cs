@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.Generic;
 namespace EindopdrachtWeer
 {
     class WeerInfo
     {
-        public class coord
-        {
-            public double lon { get; set; }
-            public double lat { get; set; }
-        }
         public class weather
         {
             public string icon { get; set; }
