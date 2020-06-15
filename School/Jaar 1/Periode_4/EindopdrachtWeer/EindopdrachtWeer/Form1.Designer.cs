@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -49,6 +52,11 @@
             this.chForecast = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblName = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblChartPast = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
+            this.chPastDays = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.btnOpties = new System.Windows.Forms.Button();
             this.rbF = new System.Windows.Forms.RadioButton();
@@ -73,6 +81,8 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chForecast)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chPastDays)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +91,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(-1, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -121,7 +132,7 @@
             // 
             this.pbWeather.BackColor = System.Drawing.Color.White;
             this.pbWeather.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbWeather.ErrorImage")));
-            this.pbWeather.Image = global::EindopdrachtWeer.Properties.Resources.cat;
+            this.pbWeather.Image = ((System.Drawing.Image)(resources.GetObject("pbWeather.Image")));
             this.pbWeather.ImageLocation = "";
             this.pbWeather.Location = new System.Drawing.Point(28, 49);
             this.pbWeather.Name = "pbWeather";
@@ -199,7 +210,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(429, 304);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Trend";
+            this.tabPage2.Text = "Voorspelling";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btn5Days
@@ -208,7 +219,7 @@
             this.btn5Days.Name = "btn5Days";
             this.btn5Days.Size = new System.Drawing.Size(75, 31);
             this.btn5Days.TabIndex = 6;
-            this.btn5Days.Text = "Breid uit";
+            this.btn5Days.Text = "5 dagen";
             this.btn5Days.UseVisualStyleBackColor = true;
             this.btn5Days.Click += new System.EventHandler(this.btn5Days_Click);
             // 
@@ -223,30 +234,30 @@
             // 
             // chForecast
             // 
-            chartArea2.AxisX.IsMarginVisible = false;
-            chartArea2.AxisX.IsStartedFromZero = false;
-            chartArea2.AxisX.Title = "Datum en tijd";
-            chartArea2.AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
-            chartArea2.AxisY.IsStartedFromZero = false;
-            chartArea2.AxisY.Title = "Temperatuur";
-            chartArea2.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea2.Name = "ChartArea1";
-            this.chForecast.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.chForecast.Legends.Add(legend2);
+            chartArea1.AxisX.IsMarginVisible = false;
+            chartArea1.AxisX.IsStartedFromZero = false;
+            chartArea1.AxisX.Title = "Datum en tijd";
+            chartArea1.AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
+            chartArea1.AxisY.IsStartedFromZero = false;
+            chartArea1.AxisY.Title = "Temperatuur";
+            chartArea1.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea1.Name = "ChartArea1";
+            this.chForecast.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.chForecast.Legends.Add(legend1);
             this.chForecast.Location = new System.Drawing.Point(-4, 42);
             this.chForecast.Name = "chForecast";
             this.chForecast.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             this.chForecast.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series2.BorderColor = System.Drawing.Color.MediumOrchid;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Color = System.Drawing.Color.Red;
-            series2.Legend = "Legend1";
-            series2.Name = "Average";
-            this.chForecast.Series.Add(series2);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series1.BorderColor = System.Drawing.Color.MediumOrchid;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Red;
+            series1.Legend = "Legend1";
+            series1.Name = "Average";
+            this.chForecast.Series.Add(series1);
             this.chForecast.Size = new System.Drawing.Size(430, 262);
             this.chForecast.TabIndex = 4;
             this.chForecast.Text = "Voorspelling";
@@ -265,21 +276,97 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.btnOpties);
-            this.tabPage3.Controls.Add(this.rbF);
-            this.tabPage3.Controls.Add(this.rbC);
-            this.tabPage3.Controls.Add(this.txtInterval);
-            this.tabPage3.Controls.Add(this.txtPlace);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.lblChartPast);
+            this.tabPage3.Controls.Add(this.lblError);
+            this.tabPage3.Controls.Add(this.chPastDays);
+            this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(429, 304);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Opties";
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "Afgelopen Dagen";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblChartPast
+            // 
+            this.lblChartPast.AutoSize = true;
+            this.lblChartPast.Location = new System.Drawing.Point(71, 39);
+            this.lblChartPast.Name = "lblChartPast";
+            this.lblChartPast.Size = new System.Drawing.Size(276, 17);
+            this.lblChartPast.TabIndex = 13;
+            this.lblChartPast.Text = "De gemmiddelde temperatuur in Veenoord";
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.BackColor = System.Drawing.Color.Transparent;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblError.Location = new System.Drawing.Point(71, 56);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(29, 13);
+            this.lblError.TabIndex = 12;
+            this.lblError.Text = "Error";
+            // 
+            // chPastDays
+            // 
+            chartArea2.AxisX.IsMarginVisible = false;
+            chartArea2.AxisX.IsStartedFromZero = false;
+            chartArea2.AxisX.Title = "Datum";
+            chartArea2.AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
+            chartArea2.AxisY.IsStartedFromZero = false;
+            chartArea2.AxisY.Title = "Temperatuur";
+            chartArea2.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea2.Name = "ChartArea1";
+            this.chPastDays.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chPastDays.Legends.Add(legend2);
+            this.chPastDays.Location = new System.Drawing.Point(0, 46);
+            this.chPastDays.Name = "chPastDays";
+            this.chPastDays.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            this.chPastDays.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series2.BorderColor = System.Drawing.Color.MediumOrchid;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Red;
+            series2.Legend = "Legend1";
+            series2.Name = "Average";
+            this.chPastDays.Series.Add(series2);
+            this.chPastDays.Size = new System.Drawing.Size(430, 262);
+            this.chPastDays.TabIndex = 11;
+            this.chPastDays.Text = "Voorspelling";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.MediumPurple;
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(334, 39);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Stenden Weerstation";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Controls.Add(this.btnOpties);
+            this.tabPage4.Controls.Add(this.rbF);
+            this.tabPage4.Controls.Add(this.rbC);
+            this.tabPage4.Controls.Add(this.txtInterval);
+            this.tabPage4.Controls.Add(this.txtPlace);
+            this.tabPage4.Controls.Add(this.label3);
+            this.tabPage4.Controls.Add(this.label2);
+            this.tabPage4.Controls.Add(this.label1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(429, 304);
+            this.tabPage4.TabIndex = 2;
+            this.tabPage4.Text = "Opties";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -453,6 +540,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chForecast)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chPastDays)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -463,7 +553,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label lblWeather;
         private System.Windows.Forms.Label lblPlace;
         private System.Windows.Forms.Label lblWind;
@@ -494,6 +584,11 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chForecast;
         private System.Windows.Forms.Button btn5Days;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chPastDays;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lblChartPast;
     }
 }
 

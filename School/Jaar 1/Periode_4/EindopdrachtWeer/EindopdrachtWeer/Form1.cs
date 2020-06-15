@@ -4,6 +4,7 @@ using System.Net;
 using System.Threading;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using MySql.Data.MySqlClient;
 
 namespace EindopdrachtWeer
 {
@@ -25,6 +26,7 @@ namespace EindopdrachtWeer
             txtPlace.Text = string.Format("{0}", cityName);
             t.Abort();
         }
+        //haal het huidige weer op en zet het in de db(roep de functie aan)
         void GetWeather(string city)
         {
             using (WebClient web = new WebClient())
@@ -35,7 +37,18 @@ namespace EindopdrachtWeer
                 WeerInfo.Root output = Result;
                 string WindDir = WindCalc.GetWindDirection(output.wind.deg);
                 DateTime LastUpdate = DateTime.Now;
-
+                
+                string today = LastUpdate.Day + "/" + LastUpdate.Month;
+                double temp = output.main.temp;
+                if(unit == "metric" && cityName == "Veenoord")
+                {
+                    insertData(temp, LastUpdate);
+                }
+                else if (unit == "imperial" && cityName == "Veenoord")
+                {
+                    insertData(((temp - 32) / 1.8), LastUpdate);
+                }
+                deleteData(LastUpdate);
                 string Symbol = "";
                 if (unit == "metric")
                 {
@@ -49,11 +62,54 @@ namespace EindopdrachtWeer
                 {
                     Symbol = "Koeien";
                 }
+                chPastDays.Series["Average"].Points.Clear();
+                chPastDays.ChartAreas["ChartArea1"].AxisY.Title = string.Format("Gem. temperatuur in {0}", Symbol);
+                //voeg data toe aan db
+                DateTime newdate = LastUpdate.AddDays(-5);
+                var dbCon = DBConnection.Instance();
+                dbCon.DatabaseName = "weerstation";
+                if (dbCon.IsConnect())
+                {
+                    int count = 0;
+                    int total = 0;
+                    for (int i = 1; i < 6; i++)
+                    {
+                        newdate = newdate.AddDays(1);
+                        int Day = newdate.Day;
+                        int Month = newdate.Month;
+                        string query = string.Format("SELECT temp FROM afgelopendagen  WHERE day={0} AND month={1}", Day, Month);
+                        var cmd = new MySqlCommand(query, dbCon.Connection);
+                        var reader = cmd.ExecuteReader();
+                        count = 0;
+                        total = 0;
+                        while (reader.Read())
+                        {
+                            total += reader.GetInt32(0);
+                            count++;
+                        }
+                        if (count == 0)
+                        {
+                            lblError.Text = "er is niet genoeg data beschikbaar voor alle dagen";
+                        }
+                        else
+                        {
+                            lblError.Text = "";
+                            double average = total / count;;
+                            if (unit == "imperial")
+                            {
+                                average = (average * 1.8) + 32;
+                            }
+                            chPastDays.Series["Average"].Points.AddXY(newdate.ToString("dd/MM"), average);
+                        }
+                        reader.Close();
+                    }
+                }
 
+                //alles laten zien
                 lblPlace.Text = string.Format("{0}, {1}", output.name, output.sys.country);
-                lblTemp.Text = string.Format("Temperatuur: {0} {1}", output.main.temp, Symbol);
+                lblTemp.Text = string.Format("Temperatuur: {0} {1}", temp, Symbol);
                 lblHum.Text = string.Format("Luchtvochtigheid: {0} %",output.main.humidity);
-                lblWind.Text = string.Format("Wind: {0} met {1} Km/H", WindDir, output.wind.speed);
+                lblWind.Text = string.Format("Wind: {0} met {1} m/s", WindDir, output.wind.speed);
                 lblUpdate.Text = string.Format("Laatst geupdate: {0}", LastUpdate);
                 lblWeather.Text = string.Format("{0}", output.weather[0].description);
                 var myImage = output.weather[0].icon;
@@ -62,6 +118,7 @@ namespace EindopdrachtWeer
                 huidigeTemperatuurToolStripMenuItem.Text = string.Format("Temperatuur: {0} {1}", output.main.temp, Symbol);
             }
         }
+        //haal de voorspelling op
         void GetForecast(string city)
         {
             using (WebClient web = new WebClient())
@@ -90,31 +147,87 @@ namespace EindopdrachtWeer
                 chForecast.ChartAreas["ChartArea1"].AxisY.Title = string.Format("Temperatuur in {0}", Symbol);
                 chForecast.Series["Average"].Points.AddXY(LastUpdate.ToString("dd/MM HH:mm"), forecast.list[0].main.temp);
 
-                for (int i = 1; i < 5; i++)
+                for (int i = 1; i < 9; i++)
                 {
-                    int toAdd = i * 24;
-                    chForecast.Series["Average"].Points.AddXY(LastUpdate.AddHours(toAdd).ToString("dd/MM HH:mm"), forecast.list[i * 8].main.temp);
+                    int toAdd = i * 3;
+                    chForecast.Series["Average"].Points.AddXY(LastUpdate.AddHours(toAdd).ToString("dd/MM HH:mm"), forecast.list[i].main.temp);
                 }
+            }
+        }
+        //stop data in de database
+        void insertData(double temp, DateTime today)
+        {
+            var dbCon = DBConnection.Instance();
+            dbCon.DatabaseName = "weerstation";
+            if (dbCon.IsConnect())
+            {
+                string query = string.Format("INSERT INTO afgelopendagen (id, temp, day, month) VALUES (NULL, '{0}', '{1}', '{2}')", temp, today.Day, today.Month);
+                var cmd = new MySqlCommand(query, dbCon.Connection);
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Console.WriteLine("check");
+                }
+                reader.Close();
+            }
+        } 
+        //delete alle oude data uit de db
+        void deleteData(DateTime date)
+        {
+            DateTime Date = date.AddDays(-5);
+            int SmD = Date.Day;
+            int SmM = Date.Month;
+            Date = date.AddDays(-10);
+            int LaD = Date.Day;
+            var dbCon = DBConnection.Instance();
+            dbCon.DatabaseName = "weerstation";
+            if (dbCon.IsConnect())
+            {
+                string query = string.Format("DELETE FROM afgelopendagen WHERE day > {0} AND day < {1} AND month = {2}", LaD, SmD, SmM);
+                var cmd = new MySqlCommand(query, dbCon.Connection);
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Console.WriteLine("check");
+                }
+                reader.Close();
             }
         }
         public void StartForm()
         {
             Application.Run(new Form2());
         }
+        //bottom right menu
         private void optiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Visible = true;
-            tabControl1.SelectedIndex = 2;
-        }
-        private void Weerstation_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            this.Show();
-            WindowState = FormWindowState.Normal;
+            tabControl1.SelectedIndex = 3;
         }
         private void verversenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GetWeather(cityName);
         }
+        private void overToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 about = new Form3();
+            about.ShowDialog();
+        }
+        private void sluitenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Visible = true;
+            tabControl1.SelectedIndex = 0;
+        }
+        //open de applicatie
+        private void Weerstation_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            WindowState = FormWindowState.Normal;
+        }
+        //onthoud de opties die geselecteerd zijn
         private void btnOpties_Click(object sender, EventArgs e)
         {
             cityName = txtPlace.Text;
@@ -131,30 +244,19 @@ namespace EindopdrachtWeer
             GetForecast(cityName);
             tabControl1.SelectedIndex = 0;
         }
+        //om de zoveel seconden doe iets
         private void timer1_Tick(object sender, EventArgs e)
         {
             GetWeather(cityName);
         }
-        private void overToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form3 about = new Form3();
-            about.ShowDialog();
-        }
-        private void sluitenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(1);
-        }
+        //minimaliseer de applicatie
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             // als je op X drukt sluit de applicatie maar hij blijft aan staan.
             e.Cancel = true;
             Visible = false;
         }
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Visible = true;
-            tabControl1.SelectedIndex = 0;
-        }
+        //laat de uitgebreide grafiek zien
         private void btn5Days_Click(object sender, EventArgs e)
         {
             Form4 MeerDagen = new Form4();

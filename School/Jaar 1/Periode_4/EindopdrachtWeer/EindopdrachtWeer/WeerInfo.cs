@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 namespace EindopdrachtWeer
 {
     class WeerInfo
