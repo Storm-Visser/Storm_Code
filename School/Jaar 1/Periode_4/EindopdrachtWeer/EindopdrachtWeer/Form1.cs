@@ -94,7 +94,7 @@ namespace EindopdrachtWeer
                         else
                         {
                             lblError.Text = "";
-                            double average = total / count;;
+                            double average = total / count;
                             if (unit == "imperial")
                             {
                                 average = (average * 1.8) + 32;
