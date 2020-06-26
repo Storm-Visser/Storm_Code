@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,7 +52,6 @@
             this.chForecast = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblName = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lblChartPast = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
             this.chPastDays = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblPastPlace = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbWeather)).BeginInit();
@@ -234,30 +234,30 @@
             // 
             // chForecast
             // 
-            chartArea1.AxisX.IsMarginVisible = false;
-            chartArea1.AxisX.IsStartedFromZero = false;
-            chartArea1.AxisX.Title = "Datum en tijd";
-            chartArea1.AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
-            chartArea1.AxisY.IsStartedFromZero = false;
-            chartArea1.AxisY.Title = "Temperatuur";
-            chartArea1.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea1.Name = "ChartArea1";
-            this.chForecast.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chForecast.Legends.Add(legend1);
+            chartArea4.AxisX.IsMarginVisible = false;
+            chartArea4.AxisX.IsStartedFromZero = false;
+            chartArea4.AxisX.Title = "Datum en tijd";
+            chartArea4.AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
+            chartArea4.AxisY.IsStartedFromZero = false;
+            chartArea4.AxisY.Title = "Temperatuur";
+            chartArea4.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea4.Name = "ChartArea1";
+            this.chForecast.ChartAreas.Add(chartArea4);
+            legend4.Enabled = false;
+            legend4.Name = "Legend1";
+            this.chForecast.Legends.Add(legend4);
             this.chForecast.Location = new System.Drawing.Point(-4, 42);
             this.chForecast.Name = "chForecast";
             this.chForecast.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             this.chForecast.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series1.BorderColor = System.Drawing.Color.MediumOrchid;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Red;
-            series1.Legend = "Legend1";
-            series1.Name = "Average";
-            this.chForecast.Series.Add(series1);
+            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series4.BorderColor = System.Drawing.Color.MediumOrchid;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Red;
+            series4.Legend = "Legend1";
+            series4.Name = "Average";
+            this.chForecast.Series.Add(series4);
             this.chForecast.Size = new System.Drawing.Size(430, 262);
             this.chForecast.TabIndex = 4;
             this.chForecast.Text = "Voorspelling";
@@ -276,7 +276,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.lblChartPast);
+            this.tabPage3.Controls.Add(this.lblPastPlace);
             this.tabPage3.Controls.Add(this.lblError);
             this.tabPage3.Controls.Add(this.chPastDays);
             this.tabPage3.Controls.Add(this.label7);
@@ -287,22 +287,13 @@
             this.tabPage3.Text = "Afgelopen Dagen";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // lblChartPast
-            // 
-            this.lblChartPast.AutoSize = true;
-            this.lblChartPast.Location = new System.Drawing.Point(71, 39);
-            this.lblChartPast.Name = "lblChartPast";
-            this.lblChartPast.Size = new System.Drawing.Size(276, 17);
-            this.lblChartPast.TabIndex = 13;
-            this.lblChartPast.Text = "De gemmiddelde temperatuur in Veenoord";
-            // 
             // lblError
             // 
             this.lblError.AutoSize = true;
             this.lblError.BackColor = System.Drawing.Color.Transparent;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblError.Location = new System.Drawing.Point(71, 56);
+            this.lblError.Location = new System.Drawing.Point(77, 56);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(29, 13);
             this.lblError.TabIndex = 12;
@@ -310,30 +301,28 @@
             // 
             // chPastDays
             // 
-            chartArea2.AxisX.IsMarginVisible = false;
-            chartArea2.AxisX.IsStartedFromZero = false;
-            chartArea2.AxisX.Title = "Datum";
-            chartArea2.AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
-            chartArea2.AxisY.IsStartedFromZero = false;
-            chartArea2.AxisY.Title = "Temperatuur";
-            chartArea2.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
-            chartArea2.Name = "ChartArea1";
-            this.chPastDays.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.chPastDays.Legends.Add(legend2);
+            chartArea3.AxisX.IsMarginVisible = false;
+            chartArea3.AxisX.IsStartedFromZero = false;
+            chartArea3.AxisX.Title = "Datum";
+            chartArea3.AxisX.TitleAlignment = System.Drawing.StringAlignment.Near;
+            chartArea3.AxisY.IsStartedFromZero = false;
+            chartArea3.AxisY.Title = "Temperatuur";
+            chartArea3.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea3.Name = "ChartArea1";
+            this.chPastDays.ChartAreas.Add(chartArea3);
+            legend3.Enabled = false;
+            legend3.Name = "Legend1";
+            this.chPastDays.Legends.Add(legend3);
             this.chPastDays.Location = new System.Drawing.Point(0, 46);
             this.chPastDays.Name = "chPastDays";
             this.chPastDays.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             this.chPastDays.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series2.BorderColor = System.Drawing.Color.MediumOrchid;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Color = System.Drawing.Color.Red;
-            series2.Legend = "Legend1";
-            series2.Name = "Average";
-            this.chPastDays.Series.Add(series2);
+            series3.BorderColor = System.Drawing.Color.MediumOrchid;
+            series3.ChartArea = "ChartArea1";
+            series3.Color = System.Drawing.Color.Red;
+            series3.Legend = "Legend1";
+            series3.Name = "Average";
+            this.chPastDays.Series.Add(series3);
             this.chPastDays.Size = new System.Drawing.Size(430, 262);
             this.chPastDays.TabIndex = 11;
             this.chPastDays.Text = "Voorspelling";
@@ -520,6 +509,15 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblPastPlace
+            // 
+            this.lblPastPlace.AutoSize = true;
+            this.lblPastPlace.Location = new System.Drawing.Point(80, 36);
+            this.lblPastPlace.Name = "lblPastPlace";
+            this.lblPastPlace.Size = new System.Drawing.Size(99, 17);
+            this.lblPastPlace.TabIndex = 13;
+            this.lblPastPlace.Text = "Weer in plaats";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -588,7 +586,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chPastDays;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.Label lblChartPast;
+        private System.Windows.Forms.Label lblPastPlace;
     }
 }
 

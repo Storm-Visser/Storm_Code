@@ -40,11 +40,11 @@ namespace EindopdrachtWeer
                 
                 string today = LastUpdate.Day + "/" + LastUpdate.Month;
                 double temp = output.main.temp;
-                if(unit == "metric" && cityName == "Veenoord")
+                if(unit == "metric")
                 {
                     insertData(temp, LastUpdate);
                 }
-                else if (unit == "imperial" && cityName == "Veenoord")
+                else if (unit == "imperial")
                 {
                     insertData(((temp - 32) / 1.8), LastUpdate);
                 }
@@ -60,7 +60,7 @@ namespace EindopdrachtWeer
                 }
                 else
                 {
-                    Symbol = "Koeien";
+                    Symbol = "°K";
                 }
                 chPastDays.Series["Average"].Points.Clear();
                 chPastDays.ChartAreas["ChartArea1"].AxisY.Title = string.Format("Gem. temperatuur in {0}", Symbol);
@@ -77,7 +77,7 @@ namespace EindopdrachtWeer
                         newdate = newdate.AddDays(1);
                         int Day = newdate.Day;
                         int Month = newdate.Month;
-                        string query = string.Format("SELECT temp FROM afgelopendagen  WHERE day={0} AND month={1}", Day, Month);
+                        string query = string.Format("SELECT temp FROM afgelopendagen2  WHERE day={0} AND month={1} AND place='{2}'", Day, Month, cityName);
                         var cmd = new MySqlCommand(query, dbCon.Connection);
                         var reader = cmd.ExecuteReader();
                         count = 0;
@@ -94,6 +94,7 @@ namespace EindopdrachtWeer
                         else
                         {
                             lblError.Text = "";
+                            lblPastPlace.Text = string.Format("De afgelopen dagen in {0}", cityName);
                             double average = total / count;
                             if (unit == "imperial")
                             {
@@ -161,7 +162,7 @@ namespace EindopdrachtWeer
             dbCon.DatabaseName = "weerstation";
             if (dbCon.IsConnect())
             {
-                string query = string.Format("INSERT INTO afgelopendagen (id, temp, day, month) VALUES (NULL, '{0}', '{1}', '{2}')", temp, today.Day, today.Month);
+                string query = string.Format("INSERT INTO afgelopendagen2 (id, temp, day, month, place) VALUES (NULL, '{0}', '{1}', '{2}', '{3}')", temp, today.Day, today.Month, cityName);
                 var cmd = new MySqlCommand(query, dbCon.Connection);
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -183,7 +184,7 @@ namespace EindopdrachtWeer
             dbCon.DatabaseName = "weerstation";
             if (dbCon.IsConnect())
             {
-                string query = string.Format("DELETE FROM afgelopendagen WHERE day > {0} AND day < {1} AND month = {2}", LaD, SmD, SmM);
+                string query = string.Format("DELETE FROM afgelopendagen2 WHERE day > {0} AND day < {1} AND month = {2}", LaD, SmD, SmM);
                 var cmd = new MySqlCommand(query, dbCon.Connection);
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())

@@ -1,11 +1,4 @@
-// simpele wait functie
-function wait(ms){
-    var start = new Date().getTime();
-    var end = start;
-    while(end < start + ms) {
-      end = new Date().getTime();
-   }
-}
+import { wait } from './wait.js';
 //functie om een random getal tussen 0 en 365 te krijgen
 function random()
 {
@@ -22,8 +15,8 @@ text.style.color = "rgb(" + random() +"," + random() + "," + random() +")";
 console.log("rgb(" + random() +"," + random() + "," + random() +")")
 text.style.textAlign = "center";
 text.style.fontSize = "230px";
-text.style.paddingTop = "230px";
+text.style.paddingTop = "150px";
 text.style.fontFamily = "verdana"
-wait(200);
+wait(500);
 
 location.reload();

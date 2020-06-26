@@ -1,6 +1,4 @@
-for (let index = 0; index < 100; index++) 
-{
-    var degree = Math.round((Math.random() * 10) + 15);
-    toString(degree);
-    console.log(degree);
-}
+let arr = [{name:"test1",age:"17"},{name:"test2",age:"17"},{name:"test3",age:"17"}];
+let test = "17";
+arr.unshift({name:"testfirst",age:test});
+console.log(arr);
