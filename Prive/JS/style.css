@@ -1,0 +1,15 @@
+table, th, td {
+    border: 1px solid black;
+}
+.TableFromJS
+{
+    border: 4px solid red;
+    height: 400px;
+    width: 600px;
+}
+.imgInTableFromJS
+{
+    border: none;
+    height: 200px;
+    width: auto;
+}
