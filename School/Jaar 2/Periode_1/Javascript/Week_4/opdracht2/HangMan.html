@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="HangMan.css">
+    <title>Document</title>
+</head>
+<body>
+    <H1>Hangman</H1>
+    <div id=letters>
+
+    </div>
+
+    <div id="container">
+        <div id="topPole"></div>
+        <div id="rope"></div>
+        <div id="pole"></div>
+        <div id="head"></div>
+        <div id="arm1"></div>
+        <div id="torso"></div>
+        <div id="arm2"></div>
+        <div id="leg1"></div>
+        <div id="leg2"></div>
+        <div id="poleLeg1"></div>
+        <div id="poleLeg2"></div>
+    </div>
+
+    <form>
+        <input type="text" id="inputForJs">
+        <button type="button" onclick="checkLetter()">Try</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="HangMan.js"></script>
+</body>
+</html>

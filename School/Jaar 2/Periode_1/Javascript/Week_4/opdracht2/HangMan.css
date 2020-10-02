@@ -1,0 +1,105 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+#container
+{
+    background-image: url("img/bg.png");
+    height: 600px;
+    width: 700px;
+    margin-top: 50px;
+}
+
+#topPole
+{
+    height:32px;
+    width:532px;
+    background-color:white;
+    margin-left: 149px;
+}
+#rope
+{
+    height:17px;
+    width:352px;
+    background-color:white;
+    margin-left: 148px;
+    float: left;
+}
+#pole
+{
+    height:498px;
+    width:180px;
+    background-color:white;
+    float: right;
+    margin-right: 20px;
+}
+#head
+{
+    height:102px;
+    width:350px;
+    background-color:white;
+    margin-left: 150px;
+    float: left;
+}
+#arm1
+{
+    height:198px;
+    width:215px;
+    background-color:white;
+    margin-left: 150px;
+    float: left;
+}
+#torso
+{
+    height:198px;
+    width:20px;
+    background-color:white;
+    float: left;
+}
+#arm2
+{
+    height:198px;
+    width:115px;
+    background-color:white;
+    float: right;
+}
+#leg1
+{
+    height:252px;
+    width:225px;
+    background-color:white;
+    margin-left: 150px;
+    float: left;
+}
+#leg2
+{
+    height:252px;
+    width:125px;
+    background-color:white;
+    float: left;
+}
+#poleLeg1
+{
+    height:70px;
+    width:105px;
+    background-color:white;
+    float: right;
+    margin-right: 20px;
+}
+#poleLeg2
+{
+    height:70px;
+    width:75px;
+    background-color:white;
+    float: right;
+}
+.letter
+{
+    height: 50px;
+    width: 30px;
+    margin-left: 5px;
+    font-size: 40px;
+    float: left;
+    border-bottom: 2px solid black;
+}
