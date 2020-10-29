@@ -6,9 +6,6 @@ function random()
     return x;
 }
 
-//         var degree = Math.round((Math.random() * 10) + 10);
-//         toString(degree);
-
 document.body.style.background = "rgb(" + random() +"," + random() + "," + random() +")";
 let text = document.getElementById("text");
 text.style.color = "rgb(" + random() +"," + random() + "," + random() +")";
