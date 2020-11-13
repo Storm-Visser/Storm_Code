@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="mazes.css">
-    <title>Document</title>
+    <title>Mazez</title>
 </head>
 <body>
     <div class="head">
         <h1>Mazez</h1>
         <h2 id="score"></h2>
+        <div id="timer">
+            00:00:00
+        </div>
     </div>
     <div class="body">
+        <div id="expl">
+            <h2>welcome</h2>
+            <p>Use WASD to move.</p>
+            <p>Get from the start to the finish Before the timer runs out.</p>
+            <p>If the timer runs out the score will reset and you will return to the start of a new maze.</p>
+            <h3>good luck</h3>
+        </div>
         <div id="maze">
 
         </div>
     </div>
+    <script src="lib/easytimer/dist/easytimer.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/Mazez.js"></script>
 </body>
 </html>

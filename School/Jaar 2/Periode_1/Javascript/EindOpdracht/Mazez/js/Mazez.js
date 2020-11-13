@@ -4,16 +4,33 @@ class Game
     {
         this.player = Player;
         this.maze = Maze;
-        this.points = 0
+        this.points = 0;
+        this.timer = new easytimer.Timer();
+        this.timer.start({countdown: true, startValues: {seconds: 180}});
     }
 
     startGame()
     {
         document.getElementById("score").innerText = ("Score: " + this.points)
         document.getElementById("maze").innerHTML = "";
+        //timer
+        this.timer.reset();
+        let timer = this.timer
+        //set de start tijd in de timer
+        $('#timer').html("<h2>" + timer.getTimeValues().toString() + "<h2>");
+        //verander de timer elke seconde
+        timer.addEventListener('secondsUpdated', function (e) 
+        {
+            $('#timer').html("<h2>" + timer.getTimeValues().toString() + "<h2>");
+        });
+        //als de timer null berijkt
+        this.timer.addEventListener('targetAchieved', function (e) 
+        {
+            location.reload();
+        });
+        //voer functies uit
         this.maze.generateMaze();
         this.showMap();
-        this.hideVision();
     }
 
     showMap()
@@ -54,6 +71,7 @@ class Game
         {
             this.finish();
         }
+        this.hideVision();
     }
 
     hideVision()
@@ -61,14 +79,49 @@ class Game
         let XPos = this.player.XPos;
         let YPos = this.player.YPos;
         //hide alles
-        //$('.wall').hide();
-        //$('.path').hide();
-        let toShow = []
-        // for (let index = 0; index < array.length; index++) 
-        // {
-            
-        // }
-        
+        $(".wall").css("background-color", "rgb(40,40,40)");
+        $(".path").css("background-color", "rgb(40,40,40)");
+        let toShow = [];
+        //haal alle blokjes in een radius van 5 op
+        for (let index = 0; index < 5; index++) 
+        {
+            if(index == 0 || index == 4)
+            {
+                toShow.push(((XPos - 2) + index) + "," + (YPos - 1));
+                toShow.push(((XPos - 2) + index) + "," + (YPos));
+                toShow.push(((XPos - 2) + index) + "," + (YPos + 1));
+            }
+            else
+            {
+                toShow.push(((XPos - 2) + index) + "," + (YPos - 2));
+                toShow.push(((XPos - 2) + index) + "," + (YPos - 1));
+                toShow.push(((XPos - 2) + index) + "," + (YPos));
+                toShow.push(((XPos - 2) + index) + "," + (YPos + 1));
+                toShow.push(((XPos - 2) + index) + "," + (YPos + 2));
+            }
+        }
+        //laat alle blojes in die radius zien
+        for (let index = 0; index < 21; index++) {
+            let coords = toShow[index];
+            let coordArrayString = coords.split(",");
+            let coordArrayInt = [parseInt(coordArrayString[0]), parseInt(coordArrayString[1])];
+            let element = document.getElementById(coords);
+            if (index == 10)
+            {
+                $(element).css("background-color", "cyan");
+            }
+            else if (this.maze.isInMaze(coordArrayInt)) 
+            {
+                if(element.className == "wall")
+                {
+                    $(element).css("background-color", "black");
+                }
+                else if(element.className == "path")
+                {
+                    $(element).css("background-color", "wheat");
+                }
+            }
+        }
     }
 
     moveN()
@@ -132,18 +185,13 @@ class Game
             return false;
         }
     }
-    
-
-    startTimer()
-    {
-
-    }
 
     finish()
     {
         this.player.XPos = 0;
         this.player.YPos = 0;
         this.points++;
+        this.timer.reset();
         this.startGame();
     }
 }
@@ -152,12 +200,12 @@ class Maze
 {
     constructor()
     {
-        //0 is een wall, 1 is een path
         this.grid = []
     }
 
     generateMaze()
     {
+        //0 is een wall, 1 is een path
         //vul het doolhof met muuren
         for (let index1 = 0; index1 < 31; index1++) 
         {
@@ -270,12 +318,18 @@ class Maze
         }
     }
 
-    contains(array, toFind){
+    contains(array, toFind)
+    {
         let toFindString = JSON.stringify(toFind);
       
         let contains = array.some(function(ele){ return JSON.stringify(ele) === toFindString;});
         return contains;
-      }
+    }
+    // simpele wait functie
+    wait(ms)
+    {
+    
+}
 
 }
 
@@ -293,7 +347,9 @@ function main()
     let maze = new Maze();
     let player = new Player();
     let game = new Game(player, maze);
-    game.startGame();
+    let timer = new easytimer.Timer();
+    
+    game.startGame();    
     //eventlistener voor het bewegen
     window.addEventListener("keyup", onKeyPress, false);
     function onKeyPress(event)

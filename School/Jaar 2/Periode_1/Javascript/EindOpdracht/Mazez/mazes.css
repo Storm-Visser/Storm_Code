@@ -2,6 +2,10 @@
 {
     padding: 0;
     margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+body 
+{
     background-color: teal;
 }
 .head
@@ -12,9 +16,28 @@
 {
     width: 1020px;
     height: 620px;
-    border: 20px solid black;
+    border: 20px solid rgb(40,40,40);
     margin-left: auto;
     margin-right: auto;
+}
+#timer
+{
+    width: 120px;
+    height: 25px;
+    margin-top: -40px;
+    margin-left: 1168px;
+    margin-bottom: 20px;
+    border: 5px solid red;
+}
+#expl
+{
+    width: 160px;
+    height: 620px;
+    float: left;
+    margin-left: 20px;
+    border: 20px solid rgb(40,40,40);
+    background-color: wheat;
+    font-size: 25px;
 }
 .path
 {
@@ -42,13 +65,5 @@
     width: 20px;
     height: 20px;
     background-color:green;
-    float: left;
-}
-.player
-{
-    width: 10px;
-    height: 10px;
-    background-color: cyan;
-    border: 5px solid wheat;
     float: left;
 }
