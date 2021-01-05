@@ -71,7 +71,7 @@ class Game
         {
             this.finish();
         }
-        this.hideVision();
+        //this.hideVision();
     }
 
     hideVision()
