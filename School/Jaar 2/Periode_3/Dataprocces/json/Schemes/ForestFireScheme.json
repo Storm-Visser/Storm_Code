@@ -1,0 +1,62 @@
+{
+    "$id" : "linkOmToeTeVoegen",
+    "$schema": "../ForestFire.json" ,
+    "title" : "ForestFire",
+    "type" : "object",
+    "properties" : 
+    {
+        "AreaDestroyed" : 
+        {
+            "type" : "string",
+            "description" : "The area that was destroyed in the fire, in KM2"
+        },
+        "Year" :
+        {
+            "type" : "integer",
+            "description" : "The year of the fire.",
+            "minimum" : 1900
+        },
+        "Forest" :
+        {
+            "type" : "object",
+            "description" : "The forest in which the fire took place.",
+            "properties" :
+            {
+                "Name" :
+                {
+                    "type" : "string",
+                    "description" : "The name of the forest."
+                },
+                "StartArea" :
+                {
+                    "type" : "double",
+                    "description" : "The area in 1900, in KM2.",
+                    "minimum" : 0.1
+                },
+                "Country" :
+                {        
+                    "type" : "object",
+                    "description" : "The country that contains the forest",
+                    "properties" :  
+                    {
+                        "Name" :
+                        {
+                            "type" : "string",
+                            "description" : "The name of the country."
+                        },
+                        "LandArea" :
+                        {
+                            "type" : "double",
+                            "description" : "The land area of the country, in KM2"
+                        },
+                        "PopulationDensity" :
+                        {
+                            "type" : "double",
+                            "description" : "The population density of the country, in amount of poeple per KM2"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

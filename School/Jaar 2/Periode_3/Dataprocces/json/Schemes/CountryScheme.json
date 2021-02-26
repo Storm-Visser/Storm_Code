@@ -1,0 +1,24 @@
+{
+    "$id" : "linkOmToeTeVoegen",
+    "$schema": "../Country.json" ,
+    "title" : "Country",
+    "type" : "object",
+    "properties" :  
+    {
+        "Name" :
+        {
+            "type" : "string",
+            "description" : "The name of the country."
+        },
+        "LandArea" :
+        {
+            "type" : "double",
+            "description" : "The land area of the country, in KM2"
+        },
+        "PopulationDensity" :
+        {
+            "type" : "double",
+            "description" : "The population density of the country, in amount of poeple per KM2"
+        }
+    }
+}

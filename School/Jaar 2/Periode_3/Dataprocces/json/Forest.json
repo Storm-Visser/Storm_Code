@@ -1,0 +1,13 @@
+{
+    "Forest" :
+    {
+        "Name" : "Noordbargerbos",
+        "StartArea" : 27.1,
+        "Country" :
+        {
+            "Name" : "Netherlands",
+            "LandArea" : 41865,
+            "PopulationDensity" : 512
+        }
+    }
+}
