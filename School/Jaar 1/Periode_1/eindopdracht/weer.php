@@ -73,8 +73,8 @@
                     //krijg een weatherstring
                     function getWeatherStringEmmen() {
                         $tempLocation = "3℃";
-                        $tempText = "Partly Sunny";
-                        $tempCode = 113;
+                        $tempText = "weer";
+                        $tempCode = 122;
                         $location = "Emmen";
 
                         return $location . " " . $tempLocation . " " . $tempCode . " " . $tempText;
