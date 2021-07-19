@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="ToucanEggQuest2D.GUI.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ToucanEggQuest2D.GUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Image Source="/Assets/Background.png" Stretch="UniformToFill" />
+        <Grid x:ConnectionId='2' x:Name="SettingsHeader" Margin="575,50,575,775">
+            <Image Source="/Assets/SettingsButton.png" Stretch="Uniform" VerticalAlignment="Top" HorizontalAlignment="Center" Width="750" Height="auto" ></Image>
+            <TextBlock x:ConnectionId='12' x:Name="textSettings" Text="Settings" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Viner Hand ITC" FontSize="100" Margin="0,35,0,0"/>
+        </Grid>
+        <Grid x:ConnectionId='3' x:Name="SettingsWindowMode" Margin="650,350,650,515">
+            <Image Source="/Assets/SettingsSelectButton.png" Stretch="Uniform" VerticalAlignment="Top" Width="600" Height="auto" ></Image>
+            <TextBlock x:ConnectionId='10' x:Name="textWindowMode" Text="Window mode" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Viner Hand ITC" FontSize="40" Margin="0,40,175,0"/>
+            <ComboBox x:ConnectionId='11' x:Name="setWindowMode" Margin="275,110,0,0" Height="50" Width="250" PlaceholderText="Fullscreen" FontSize="25">
+                <x:String>Fullscreen</x:String>
+                <x:String>Windowed</x:String>
+            </ComboBox>
+        </Grid>
+        <Grid x:ConnectionId='4' x:Name="SettingsResolutie" Margin="650,600,650,250">
+            <Image Source="/Assets/SettingsSelectButton.png" Stretch="Uniform" VerticalAlignment="Top" Width="600" Height="auto" ></Image>
+            <TextBlock x:ConnectionId='8' x:Name="textResolutie" Text="Resolutie" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Viner Hand ITC" FontSize="40" Margin="0,40,250,0"/>
+            <ComboBox x:ConnectionId='9' x:Name="setResolutie" Margin="275,110,0,0" Height="50" Width="250" PlaceholderText="1920x1080" FontSize="25">
+                <x:String>1920x1080</x:String>
+                <x:String>1280x720</x:String>
+                <x:String>854x480</x:String>
+            </ComboBox>
+        </Grid>
+        <Grid x:ConnectionId='5' x:Name="SettingsSound" Margin="650,850,650,0">
+            <Image Source="/Assets/SettingsSelectButton.png" Stretch="Uniform" VerticalAlignment="Top" Width="600" Height="auto" ></Image>
+            <TextBlock x:ConnectionId='6' x:Name="textSound" Text="Sound" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Viner Hand ITC" FontSize="40" Margin="0,40,300,0"/>
+            <Slider x:ConnectionId='7' x:Name="setSoundSlider" Minimum="0" Maximum="100" TickFrequency="1" Width="350" Margin="100" Value="100"></Slider>
+        </Grid>
+    </Grid>
+</Page>
+

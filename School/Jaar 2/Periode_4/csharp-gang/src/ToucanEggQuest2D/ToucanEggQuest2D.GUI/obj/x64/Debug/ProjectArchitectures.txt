@@ -1,0 +1,1 @@
+D:\XAMPP\htdocs\GitHub\csharp-gang\src\ToucanEggQuest2D\ToucanEggQuest2D.GUI\ToucanEggQuest2D.GUI.csproj;x64

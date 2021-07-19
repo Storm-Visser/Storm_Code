@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="ToucanEggQuest2D.GUI.Pages.CreatorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ToucanEggQuest2D.GUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Image Source="/Assets/background game.png" Stretch="UniformToFill"/>
+        <Canvas x:ConnectionId='2' x:Name="SliderCanvas"  Background="White" HorizontalAlignment="Stretch" Margin="0,0,0,800" Opacity="0.5" VerticalAlignment="Stretch"/>
+    </Grid>
+</Page>
+

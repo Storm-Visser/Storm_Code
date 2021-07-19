@@ -1,0 +1,9 @@
+D:\XAMPP\htdocs\GitHub\csharp-gang\src\ToucanEggQuest2D\ToucanEggQuest2D.Core\bin\Debug\netstandard2.0\ToucanEggQuest2D.Core.deps.json
+D:\XAMPP\htdocs\GitHub\csharp-gang\src\ToucanEggQuest2D\ToucanEggQuest2D.Core\bin\Debug\netstandard2.0\ToucanEggQuest2D.Core.dll
+D:\XAMPP\htdocs\GitHub\csharp-gang\src\ToucanEggQuest2D\ToucanEggQuest2D.Core\bin\Debug\netstandard2.0\ToucanEggQuest2D.Core.pdb
+D:\XAMPP\htdocs\GitHub\csharp-gang\src\ToucanEggQuest2D\ToucanEggQuest2D.Core\obj\Debug\netstandard2.0\ToucanEggQuest2D.Core.csproj.AssemblyReference.cache
+D:\XAMPP\htdocs\GitHub\csharp-gang\src\ToucanEggQuest2D\ToucanEggQuest2D.Core\obj\Debug\netstandard2.0\ToucanEggQuest2D.Core.AssemblyInfoInputs.cache
+D:\XAMPP\htdocs\GitHub\csharp-gang\src\ToucanEggQuest2D\ToucanEggQuest2D.Core\obj\Debug\netstandard2.0\ToucanEggQuest2D.Core.AssemblyInfo.cs
+D:\XAMPP\htdocs\GitHub\csharp-gang\src\ToucanEggQuest2D\ToucanEggQuest2D.Core\obj\Debug\netstandard2.0\ToucanEggQuest2D.Core.csproj.CoreCompileInputs.cache
+D:\XAMPP\htdocs\GitHub\csharp-gang\src\ToucanEggQuest2D\ToucanEggQuest2D.Core\obj\Debug\netstandard2.0\ToucanEggQuest2D.Core.dll
+D:\XAMPP\htdocs\GitHub\csharp-gang\src\ToucanEggQuest2D\ToucanEggQuest2D.Core\obj\Debug\netstandard2.0\ToucanEggQuest2D.Core.pdb

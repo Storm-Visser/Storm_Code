@@ -1,0 +1,28 @@
+﻿<Page
+    x:Name="Page"
+    x:Class="ToucanEggQuest2D.GUI.Pages.PlayPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid x:FieldModifier="Public" x:Name="MenuGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.166666666666667*"></ColumnDefinition>
+            <ColumnDefinition Width="0.166666666666667*"></ColumnDefinition>
+            <ColumnDefinition Width="0.166666666666667*"></ColumnDefinition>
+            <ColumnDefinition Width="0.166666666666667*"></ColumnDefinition>
+            <ColumnDefinition Width="0.166666666666667*"></ColumnDefinition>
+            <ColumnDefinition Width="0.166666666666667*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.166666666666667*"></RowDefinition>
+            <RowDefinition Height="0.166666666666667*"></RowDefinition>
+            <RowDefinition Height="0.166666666666667*"></RowDefinition>
+            <RowDefinition Height="0.166666666666667*"></RowDefinition>
+            <RowDefinition Height="0.166666666666667*"></RowDefinition>
+            <RowDefinition Height="0.166666666666667*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Canvas x:FieldModifier="Public" x:Name="Canvas"/>
+    </Grid>
+</Page>

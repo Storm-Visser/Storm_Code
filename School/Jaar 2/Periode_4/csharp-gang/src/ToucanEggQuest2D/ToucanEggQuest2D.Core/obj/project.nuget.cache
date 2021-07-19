@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Jf6HAx+ilxpPxdSUT23LTbpABFly8ZKyILeIjcERh8XXnR41+i1w3UX8iNFq8Fdkj7l8H0osgyFS1AmNInXHBg==",
+  "success": true,
+  "projectFilePath": "D:\\XAMPP\\htdocs\\GitHub\\csharp-gang\\src\\ToucanEggQuest2D\\ToucanEggQuest2D.Core\\ToucanEggQuest2D.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Storm\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Storm\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
