@@ -1,0 +1,30 @@
+insert: {
+    $jsonSchema: {
+        bsonType: "object",
+        required: ["taal", "ondertitelLocatie"],
+        properties: {
+            filmID: {
+                bsonType: "int",
+                description: "can only be a int and is an foreign key for Film"
+
+            },
+            afleveringID: {
+                bsonType: "int",
+                description: "can only be a int and is an foreign key for Aflevering"
+
+            },
+            taal: {
+                bsonType: "string",
+                description: "can only be a string and is the language for the Ondertiteling",
+                maxLength: 50
+
+            }
+            ondertitelLocatie: {
+                bsonType: "string",
+                description: "can only be a string and is the location of the Ondertiteling on the server",
+                maxLength: 255
+
+            }
+        }
+    }
+}
